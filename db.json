@@ -1,0 +1,172 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    },
+    {
+      "user": "21",
+      "password": "abcabc",
+      "name": "Intelligent Wooden Shirt",
+      "avatar": "abv",
+      "gender": 1,
+      "role": "407.00"
+    }
+  ],
+  "role": [
+    {
+      "id": "1",
+      "active": true,
+      "created_at": "09-09-2020",
+      "created_by": "0",
+      "update_at": "0",
+      "update_by": "0",
+      "role_key": "0",
+      "role_name": "0"
+    }
+  ],
+  "pemission": [
+    {
+      "id": "1",
+      "active": true,
+      "pemission_key": 9,
+      "pemission_name": "0"
+    }
+  ],
+  "role_pemission": [
+    {
+      "role_id": "1",
+      "pemissionid_id": "a"
+    }
+  ],
+  "role_pemmission": [
+    {
+      "id": "1",
+      "active": true,
+      "created_at": "09-09-2020",
+      "created_by": "0",
+      "update_at": "0",
+      "update_by": "0",
+      "role_key": "0",
+      "role_name": "0"
+    }
+  ],
+  "categories_news": [
+    {
+      "id": "1",
+      "categories_news": "Học tập"
+    }
+  ],
+  "news": [
+    {
+      "id": "1",
+      "title": "true",
+      "image": "abc",
+      "description": "dfgdfdfgfdgdf",
+      "created_at": "0",
+      "created_by": "0",
+      "update_at": "0",
+      "update_by": "0",
+      "username": ""
+    }
+  ],
+  "user_role": [
+    {
+      "user_id": 1,
+      "role_id": 1
+    }
+  ]
+}
