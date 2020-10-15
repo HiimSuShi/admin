@@ -1,121 +1,59 @@
 {
   "users": [
     {
-      "id": 1,
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
+      "user": "soicom1102",
+      "password": "asa",
+      "gender": "Nũ",
+      "role": "Hiệu trưởng",
+      "id": 11
     },
     {
-      "user": "21",
+      "user": "soicom1102",
       "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
+      "gender": "Nam",
+      "role": "Hiệu trưởng",
+      "id": 12
     },
     {
-      "user": "21",
+      "user": "soicom1102",
       "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
+      "gender": "Nam",
+      "role": "Hiệu trưởng",
+      "id": 13
     },
     {
-      "user": "21",
+      "user": "Đạt",
       "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
+      "gender": "Nam",
+      "role": "Hiệu trưởng",
+      "id": 14
     },
     {
-      "user": "21",
+      "user": "soicom1102",
       "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
-    },
-    {
-      "user": "21",
-      "password": "abcabc",
-      "name": "Intelligent Wooden Shirt",
-      "avatar": "abv",
-      "gender": 1,
-      "role": "407.00"
+      "gender": "Nũ",
+      "role": "Hiệu trưởng",
+      "id": 16
     }
   ],
   "role": [
     {
       "id": "1",
       "active": true,
-      "created_at": "09-09-2020",
-      "created_by": "0",
-      "update_at": "0",
-      "update_by": "0",
       "role_key": "0",
-      "role_name": "0"
+      "role_name": "Hiệu trưởng"
+    },
+    {
+      "id": "1",
+      "active": true,
+      "role_key": "0",
+      "role_name": "Giảng viên"
+    },
+    {
+      "id": "1",
+      "active": true,
+      "role_key": "0",
+      "role_name": "Học sinh"
     }
   ],
   "pemission": [
@@ -132,22 +70,11 @@
       "pemissionid_id": "a"
     }
   ],
-  "role_pemmission": [
-    {
-      "id": "1",
-      "active": true,
-      "created_at": "09-09-2020",
-      "created_by": "0",
-      "update_at": "0",
-      "update_by": "0",
-      "role_key": "0",
-      "role_name": "0"
-    }
-  ],
   "categories_news": [
     {
       "id": "1",
-      "categories_news": "Học tập"
+      "categories_name": "Học tập",
+      "description": "Chuyên về học tập"
     }
   ],
   "news": [

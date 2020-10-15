@@ -1,30 +1,54 @@
 import React, { useState, useEffect } from 'react';
 import Routers from './routers';
 import apiRequest from './api/accountApi';
+import apiRole from './api/roleApi';
+import { useHistory } from 'react-router-dom';
+import Account from './pages/views/Admin/Account';
+
 function App() {
 
-  const [accounts, setAccounts] = useState([]);
+  const [allData, setAllData] = useState([]);
+  const [addSuccess, setAddSuccess] = useState(false)
+  let history = useHistory();
+  // const [categories, setCategories] = useState([]);
+  const [dataRole, setDataRole] = useState([]);
+  console.log();
+
+  useEffect(() => {
+    const getDataRole = async () => {
+      try {
+        const { dataRole } = await apiRole.getAll();
+        setDataRole(dataRole);
+      } catch (error) {
+
+      }
+    }
+    getDataRole()
+  }, []);
 
   // Danh sách sản phẩm
   useEffect(() => {
-    const getAccounts = async () => {
+    const getAllData = async () => {
       try {
         const { data } = await apiRequest.getAll();
-        setAccounts(data);
+        setAllData(data);
       } catch (error) {
         console.log('failed to request API: ', error)
       }
     }
-    getAccounts();
+    getAllData();
   }, []);
+
 
 
   // Xóa sản phẩm
   const onHandleRemove = async (id) => {
     try {
       const { data } = await apiRequest.remove(id);
-      const newAccounts = accounts.filter(account => account.id !== data.id);
-      setAccounts(newAccounts);
+      console.log("done");
+      const newAllData = allData.filter(allData => allData.id !== data.id);
+      setAllData(newAllData);
+      window.location.href = '/admin/account';
     } catch (error) {
       console.log('failed to request API: ', error)
     }
@@ -42,34 +66,42 @@ function App() {
   // }
 
   // Thêm sản phẩm
-  const onHandleAdd = async (account) => {
+  const onHandleAdd = async (allData) => {
     try {
-      const { data } = await apiRequest.create(account);
-      setAccounts([
-        ...accounts,
+      const { data } = await apiRequest.create(allData);
+      setAllData({
+        ...allData,
         data
-      ])
+      })
+      console.log('them than cong')
+      window.location.href = '/admin/account';
+      // setAddSuccess(true)
     } catch (error) {
       console.log('failed to request API: ', error)
     }
+
   }
 
 
-  // // Cập nhật product 
-  // const onHandleUpdate = (updateProduct) => {
-  //   const newProducts = products.map(product => (
-  //     product.id === updateProduct.id ? updateProduct : product  // Nếu product.id bằng với id của sản phẩm vừa chỉnh sửa thì trả về mảng có object mới
-  //   ));
-  //   localStorage.setItem('products', JSON.stringify(newProducts))
-  //   setProducts(newProducts);
-  // }
+
+  // Cập nhật 
+  const onHandleUpdate = (updateAccount) => {
+    const newAccounts = allData.map(acc => (
+      acc.id === updateAccount.id ? updateAccount : acc  // Nếu product.id bằng với id của sản phẩm vừa chỉnh sửa thì trả về mảng có object mới
+    ));
+    console.log(newAccounts)
+    // localStorage.setItem('account', JSON.stringify(newAccounts))
+    // setAllData(newAccounts);
+    // window.location.href = '/admin/account';
+  }
 
 
   return (
     <div className="App">
-      <Routers accounts={accounts} onRemove={onHandleRemove} onAdd={onHandleAdd} />
+      <Routers dataRole={dataRole} allData={allData} onAdd={onHandleAdd} onRemove={onHandleRemove} onUpdate={onHandleUpdate} />
+
     </div>
   )
-  // onRemove={onHandleRemove} onAdd={onHandleAdd} onUpdate={onHandleUpdate}
+
 }
 export default App;

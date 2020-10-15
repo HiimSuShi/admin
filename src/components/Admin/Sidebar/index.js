@@ -67,6 +67,62 @@ const Sidebar = () => {
                   </li>
                 </ul>
               </li>
+              <li className="nav-item has-treeview">
+                <a href="#" className="nav-link">
+                  <i className="nav-icon fas fa-folder" />
+                  <p>
+                    Info
+                    <i className="right fas fa-angle-left" />
+                  </p>
+                </a>
+                <ul className="nav nav-treeview">
+                  <li className="nav-item">
+                    <Link to="/admin/account" className="nav-link">
+                      <i className="far fa-file nav-icon" />
+                      <p>Manage Info</p>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/admin/account/add" className="nav-link">
+                      <i className="far fas fa-plus nav-icon" />
+                      <p>Add Info</p>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/admin/categories">Manager Cate</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/admin/categories/add">Add Categories</a>
+                </div>
+              </li>
+              <li className="nav-item has-treeview">
+                <a href="#" className="nav-link">
+                  <i className="nav-icon fas fa-folder" />
+                  <p>
+                    News
+                    <i className="right fas fa-angle-left" />
+                  </p>
+                </a>
+                <ul className="nav nav-treeview">
+                  <li className="nav-item">
+                    <Link to="/admin/news" className="nav-link">
+                      <i className="far fa-file nav-icon" />
+                      <p>Manage News</p>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/admin/news/add" className="nav-link">
+                      <i className="far fas fa-plus nav-icon" />
+                      <p>Add News</p>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </nav>
           {/* /.sidebar-menu */}

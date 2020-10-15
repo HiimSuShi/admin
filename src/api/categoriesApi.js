@@ -1,27 +1,24 @@
 import http from "./axiosHttp";
 
 const getAll = () => {
-    return http.get("/users");
+    return http.get("/categories");
 };
 
 const get = id => {
-    return http.get(`/users/${id}`);
+    return http.get(`/categories/${id}`);
 };
 
 const create = data => {
-    return http.post("/users", data);
+    return http.post("/categories", data);
 };
 
 const update = (id, data) => {
-    return http.put(`/users/${id}`, data);
+    return http.put(`/categories/${id}`, data);
 };
 
 const remove = id => {
     console.log(id);
-    return http.delete(`/users/${id}`);
-};
-const getAllRole = () => {
-    return http.getRole("/role");
+    return http.delete(`/categories/${id}`);
 };
 
 export default {
@@ -30,5 +27,4 @@ export default {
     create,
     update,
     remove,
-    getAllRole
 };

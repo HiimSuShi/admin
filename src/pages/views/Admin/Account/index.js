@@ -2,9 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Account = ({ accounts, onRemove, a }) => {
-    const removeHandle = (id) => {
-        onRemove(id);
+const Account = ({ allData, onRemove, a }) => {
+    const getId = (id) => {
+        a = id;
+
+    }
+    const removeHandle = () => {
+        onRemove(a);
     }
     return (
         <div style={{
@@ -17,23 +21,28 @@ const Account = ({ accounts, onRemove, a }) => {
                         <th>Name</th>
                         <th>Gender</th>
                         <th>Role</th>
+                        <th>Set Role</th>
                         <th colSpan={2}><Link to="/admin/account/add" className="btn btn-success">Thêm nhân viên</Link></th>
                     </tr>
                 </thead>
                 <tbody>
-                    {accounts.map(({ id, name, gender, role }, index) => (
-                        a = id,
+                    {allData.map(({ id, user, gender, role }, index) => (
                         <tr key={index}>
                             <th scope="row">{id}</th>
-                            <td>{name}</td>
+                            <td>{user}</td>
                             <td>{gender}</td>
+
                             {/* <td><img src={image} alt="" width="50" /></td> */}
                             <td>{role}</td>
                             <td>
-                                <button className="btn btn-primary" >Sửa</button>
+                                <a className="btn btn-success" data-toggle="modal1" data-target="#exampleModal1" >Set Role</a>
+
                             </td>
                             <td>
-                                <button className="btn btn-danger" data-toggle="modal" data-target="#exampleModal"  >Xóa</button>
+                                <a className="btn btn-primary" href={'/admin/account/update/' + id} onClick={() => localStorage.setItem('edit_id', id)}  >Sửa</a>
+                            </td>
+                            <td>
+                                <button className="btn btn-danger" onClick={() => getId(id)} data-toggle="modal" data-target="#exampleModal"  >Xóa</button>
                             </td>
                         </tr>
                     ))}
@@ -54,7 +63,22 @@ const Account = ({ accounts, onRemove, a }) => {
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            <button type="button" onClick={() => removeHandle(a)} class="btn btn-success">Xoá</button>
+                            <button type="button" onClick={() => removeHandle()} class="btn btn-success">Xoá</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+                                <button type="button" class="close" data-dismiss="modal1" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Set quyền cho tài khoản
+                        </div>
                         </div>
                     </div>
                 </div>
