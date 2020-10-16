@@ -1,36 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import Routers from './routers';
 import apiRequest from './api/accountApi';
-import apiRole from './api/roleApi';
+import infoApi from './api/infoApi';
+import newApi from './api/newApi';
 import { useHistory } from 'react-router-dom';
 import Account from './pages/views/Admin/Account';
 
 function App() {
 
   const [allData, setAllData] = useState([]);
+  const [data, setData] = useState([]);
+  const [Ndata, setNData] = useState([]);
   const [addSuccess, setAddSuccess] = useState(false)
   let history = useHistory();
   // const [categories, setCategories] = useState([]);
-  const [dataRole, setDataRole] = useState([]);
   console.log();
 
-  useEffect(() => {
-    const getDataRole = async () => {
-      try {
-        const { dataRole } = await apiRole.getAll();
-        setDataRole(dataRole);
-      } catch (error) {
-
-      }
-    }
-    getDataRole()
-  }, []);
 
   // Danh sách sản phẩm
   useEffect(() => {
     const getAllData = async () => {
       try {
         const { data } = await apiRequest.getAll();
+
         setAllData(data);
       } catch (error) {
         console.log('failed to request API: ', error)
@@ -38,6 +30,21 @@ function App() {
     }
     getAllData();
   }, []);
+  // Danh sách info
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await infoApi.getAll();
+
+        setData(data);
+      } catch (error) {
+        console.log('failed to request API: ', error)
+      }
+    }
+    getData();
+  }, []);
+
+
 
 
 
@@ -98,7 +105,7 @@ function App() {
 
   return (
     <div className="App">
-      <Routers dataRole={dataRole} allData={allData} onAdd={onHandleAdd} onRemove={onHandleRemove} onUpdate={onHandleUpdate} />
+      <Routers data={data} allData={allData} onAdd={onHandleAdd} onRemove={onHandleRemove} onUpdate={onHandleUpdate} />
 
     </div>
   )

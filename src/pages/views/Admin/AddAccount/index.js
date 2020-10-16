@@ -32,8 +32,6 @@ const AddAccount = ({ onAdd, dataRole }) => {
             created_at: date,
             updated_at: null,
             info_id: null,
-            role_id: null,
-            class_id: null,
 
         }
         console.log(newData);
@@ -45,7 +43,7 @@ const AddAccount = ({ onAdd, dataRole }) => {
 
         const { name, value } = event.target;
         setAccount({
-            active: null,
+            active: true,
             ...account,
             [name]: value
         })
@@ -81,20 +79,6 @@ const AddAccount = ({ onAdd, dataRole }) => {
                         onChange={onChange}
                     />
                 </div>
-                {/* <div className="form-group">
-                    <label htmlFor="avatar">Avatar</label>
-                    <div className="input-group">
-                        <div className="custom-file">
-                            <input type="file"
-                                className="custom-file-input"
-                                id="avatar"
-                                name="avatar"
-                                ref={register}
-                            />
-                            <label className="custom-file-label" htmlFor="avatar" aria-describedby="avatarHelp">Choose image</label>
-                        </div>
-                    </div>
-                </div> */}
                 <div className="form-group">
 
                     <label htmlFor="gender">Gender</label>
@@ -109,32 +93,12 @@ const AddAccount = ({ onAdd, dataRole }) => {
                     </div>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="">Role</label>
-                    <select class="custom-select" name="role" id="role">
-                        <option selected>Role</option>
-
-                        {/* {dataRole.map(({ id, role_name }, index) => (
-
-                            <option value="{id}">{role_name}</option>
-                        ))} */}
-                    </select>
-                </div>
-                <div className="form-group">
                     <label htmlFor="">Info</label>
-                    <select class="custom-select" >
+                    <select class="custom-select" name="info_id" onChange={onChange}>
                         <option selected>Chọn thông tin của user</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="">Lớp</label>
-                    <select class="custom-select" >
-                        <option selected>Chọn lớp</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">Nguyễn Huy Vũ</option>
+                        <option value="2">Nguyễn Công Đạt</option>
+                        <option value="3">Nguyễn ABC</option>
                     </select>
                 </div>
                 {/* <div className="form-group">

@@ -1,7 +1,7 @@
 import http from './axiosHttp';
 
 const getAll = () => {
-    return http.get("/news");
+    return http.get("/info");
 };
 export default {
     getAll,

@@ -32,6 +32,15 @@ const Sidebar = () => {
                   <p>Dashboard</p>
                 </Link>
               </li>
+              <li className="nav-item has-treeview">
+                <a href="#" className="nav-link">
+                  <i className="nav-icon fas fa-folder" />
+                  <p>
+                    User
+                    <i className="right fas fa-angle-left" />
+                  </p>
+                </a>
+              </li>
               <li className="nav-item">
                 <Link to="/admin/account" className="nav-link">
                   <i className="far fa-file nav-icon" />
@@ -44,30 +53,8 @@ const Sidebar = () => {
                   </Link>
                 </li>
               </li>
-              <li className="nav-item has-treeview">
-                <a href="#" className="nav-link">
-                  <i className="nav-icon fas fa-folder" />
-                  <p>
-                    User
-                    <i className="right fas fa-angle-left" />
-                  </p>
-                </a>
-                <ul className="nav nav-treeview">
-                  <li className="nav-item">
-                    <Link to="/admin/account" className="nav-link">
-                      <i className="far fa-file nav-icon" />
-                      <p>Manage User</p>
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link to="/admin/account/add" className="nav-link">
-                      <i className="far fas fa-plus nav-icon" />
-                      <p>Add User</p>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item has-treeview">
+
+              <li className="nav-item">
                 <a href="#" className="nav-link">
                   <i className="nav-icon fas fa-folder" />
                   <p>
@@ -75,32 +62,45 @@ const Sidebar = () => {
                     <i className="right fas fa-angle-left" />
                   </p>
                 </a>
-                <ul className="nav nav-treeview">
+                <ul className="nav">
                   <li className="nav-item">
-                    <Link to="/admin/account" className="nav-link">
+                    <Link to="/admin/info" className="nav-link">
                       <i className="far fa-file nav-icon" />
                       <p>Manage Info</p>
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/admin/account/add" className="nav-link">
+                    <Link to="/admin/info/add" className="nav-link">
                       <i className="far fas fa-plus nav-icon" />
                       <p>Add Info</p>
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Categories
+              <li className="nav-item">
+                <a href="#" className="nav-link">
+                  <i className="nav-icon fas fa-folder" />
+                  <p>
+                    Categories
+                    <i className="right fas fa-angle-left" />
+                  </p>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/admin/categories">Manager Cate</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/admin/categories/add">Add Categories</a>
-                </div>
+                <ul className="nav">
+                  <li className="nav-item">
+                    <Link to="/admin/categories" className="nav-link">
+                      <i className="far fa-file nav-icon" />
+                      <p>Manage Categories</p>
+                    </Link>
+                  </li>
+                  <li className="nav-item"                                                                     >
+                    <Link to="/admin/categories/add" className="nav-link">
+                      <i className="far fas fa-plus nav-icon" />
+                      <p>Add Categories</p>
+                    </Link>
+                  </li>
+                </ul>
               </li>
-              <li className="nav-item has-treeview">
+              <li className="nav-item">
                 <a href="#" className="nav-link">
                   <i className="nav-icon fas fa-folder" />
                   <p>
@@ -108,7 +108,7 @@ const Sidebar = () => {
                     <i className="right fas fa-angle-left" />
                   </p>
                 </a>
-                <ul className="nav nav-treeview">
+                <ul className="nav">
                   <li className="nav-item">
                     <Link to="/admin/news" className="nav-link">
                       <i className="far fa-file nav-icon" />

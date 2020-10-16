@@ -20,9 +20,6 @@ const remove = id => {
     console.log(id);
     return http.delete(`/users/${id}`);
 };
-const getAllRole = () => {
-    return http.getRole("/role");
-};
 
 export default {
     getAll,
@@ -30,5 +27,4 @@ export default {
     create,
     update,
     remove,
-    getAllRole
 };

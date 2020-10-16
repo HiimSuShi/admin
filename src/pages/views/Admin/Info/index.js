@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import infoApi from './../../../../api/infoApi';
+
 import { Link } from 'react-router-dom';
 
-const Account = ({ allData, onRemove, a }) => {
+const Info = ({ data, onRemove, a }) => {
+    console.log(data);
     const getId = (id) => {
         a = id;
 
@@ -18,19 +21,27 @@ const Account = ({ allData, onRemove, a }) => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Ngày tạo</th>
-                        <th colSpan={2}><Link to="/admin/account/add" className="btn btn-success">Thêm nhân viên</Link></th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Birthday</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Gender</th>
+                        <th colSpan={2}><Link to="/admin/info/add" className="btn btn-success">Thêm thông tin</Link></th>
                     </tr>
                 </thead>
                 <tbody>
-                    {allData.map(({ id, user, created_at }, index) => (
+                    {data.map(({ id, firstname, lastname, birthday, address, phone, gender, created_at, updated_by }, index) => (
                         <tr key={index}>
-                            <th scope="row">{id}</th>
-                            <td>{user}</td>
-                            <td>{created_at}</td>
+                            <th scope="row">{index}</th>
+                            <td>{firstname}</td>
+                            <td>{lastname}</td>
+                            <td>{birthday}</td>
+                            <td>{address}</td>
+                            <td>{phone}</td>
+                            <td>{gender}</td>
                             <td>
-                                <a className="btn btn-primary" href={'/admin/account/update/' + id} onClick={() => localStorage.setItem('edit_id', id)}  >Sửa</a>
+                                <a className="btn btn-primary" href={'/admin/info/update/' + id} onClick={() => localStorage.setItem('edit_id', id)}  >Sửa</a>
                             </td>
                             <td>
                                 <button className="btn btn-danger" onClick={() => getId(id)} data-toggle="modal" data-target="#exampleModal"  >Xóa</button>
@@ -63,8 +74,8 @@ const Account = ({ allData, onRemove, a }) => {
     );
 };
 
-Account.propTypes = {
+Info.propTypes = {
 
 };
 
-export default Account;
+export default Info;

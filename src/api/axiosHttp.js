@@ -6,3 +6,9 @@ export default axios.create({
         "Content-type": "application/json"
     }
 });
+export const api = axios.create({
+    baseURL: "https://enaoteam.herokuapp.com/",
+    headers: {
+        "Content-type": "application/json"
+    }
+});

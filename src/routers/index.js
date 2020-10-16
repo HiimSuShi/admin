@@ -8,18 +8,20 @@ import AddAccount from '../pages/views/Admin/AddAccount';
 import Account from '../pages/views/Admin/Account';
 import EditAccount from '../pages/views/Admin/EditAccount.js';
 import Categories from '../pages/views/Admin/Categories';
+import AddCategories from '../pages/views/Admin/AddCategories';
+import News from '../pages/views/Admin/News';
+import Info from '../pages/views/Admin/Info';
 
 
 //Views
 import About from '../pages/views/Main/About';
 import Home from '../pages/views/Main/Home';
-import AddCategories from '../pages/views/Admin/AddCategories';
-import News from '../pages/views/Admin/News';
 
 
 
 
-const Routers = ({ dataRole, allData, onRemove, onHandleSubmit, onAdd, onUpdate }) => {
+
+const Routers = ({ data, allData, onRemove, onHandleSubmit, onAdd, onUpdate }) => {
     const onHandleRemove = (id) => {
         onRemove(id)
     }
@@ -32,8 +34,17 @@ const Routers = ({ dataRole, allData, onRemove, onHandleSubmit, onAdd, onUpdate 
                             <Route exact path='/admin'>
                                 <Dashboard />
                             </Route>
+                            {/* <Route path='/admin/info/add'>
+                                <Info info={info} exact />
+                            </Route>
+                            <Route path='/admin/info/update/:id' >
+                                <Info info={info} exact />
+                            </Route> */}
+                            <Route path='/admin/info'  >
+                                <Info data={data} />
+                            </Route>
                             <Route path='/admin/account/add'>
-                                <AddAccount onAdd={onAdd} dataRole={dataRole} exact />
+                                <AddAccount onAdd={onAdd} exact />
                             </Route>
                             <Route path='/admin/account/update/:id' >
                                 <EditAccount onUpdate={onUpdate} />
